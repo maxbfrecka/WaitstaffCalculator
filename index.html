@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="assets/style.css"> 
+    <script src="https://code.angularjs.org/1.3.10/angular.js"></script>
+    <script src="https://code.angularjs.org/1.3.10/angular-messages.min.js"></script>
+    <script src="controller.js"></script>
+  </head>
+
+<body ng-app="myApp" ng-controller="WaitstaffController as ws">
+
+	<h1>Waitstaff Calculator</h1>
+		<h2>Enter the Meal Details</h2>
+
+			<form name="Calculator" ng-submit="ws.submit()">
+				<p>Base Meal Price:</p>
+				<input type="number" ng-model="ws.basePrice" required> <br>
+				<p>Tax Rate: %</p>
+				<input type="number" ng-model="ws.taxRate" required> <br>
+				<p>Tip Percentage: %</p>
+				<input type="number" ng-model="ws.tipPercentage" required> <br>
+				<button>Submit</button>
+			</form>
+
+			<button ng-click="ws.cancel()">Cancel</button>
+
+
+		<h2>Customer Charges</h2>
+			<p>Subtotal {{ws.subtotal | currency}}</p>
+			<p>Tip {{ws.tip | currency}}</p>
+			<p>Total {{ws.total | currency}}</p>
+
+		<h2>My Earnings Info</h2>
+			<p>Tip Total {{ws.tipTotal | currency}}</p>
+			<p>Meal Count {{ws.mealCount}}</p>
+			<p>Average Tip Per Meal {{ws.averageTip | currency}}</p>
+
+
+
+</body>
+</html>
