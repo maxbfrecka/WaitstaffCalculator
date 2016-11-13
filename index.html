@@ -4,18 +4,25 @@
     	<link rel="stylesheet" type="text/css" href="assets/style.css">
    		<script type="text/javascript" src="assets/bower_components/angular/angular.js"></script>
     	<script type="text/javascript" src="assets/bower_components/angular-route/angular-route.js"></script>
+    	<script type="text/javascript" src="assets/bower_components/angular-animate/angular-animate.js"></script>
     	<script src="controller.js"></script>
   	</head>
 
 	<body>
 		
 		<h1>Waitstaff Calculator</h1>
-		
-		<a ng-href="#/home">Home</a>
-    	<a ng-href="#/newmeal">New Meal</a>
-    	<a ng-href="#/myearnings">My Earnings</a>
-
-		<div ng-view></div>
 	
+		<div class="nav">	
+			<a ng-href="#/home">Home</a>
+    		<a ng-href="#/newmeal">New Meal</a>
+    		<a ng-href="#/myearnings">My Earnings</a>
+    	</div>
+
+
+    	<div class="animate-view-container" id="main">
+			<div ng-view class="animate-view"></div>
+		</div>
+
+
 	</body>
 </html>
