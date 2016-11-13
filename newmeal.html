@@ -1,0 +1,18 @@
+	<h2>Enter the Meal Details</h2>
+
+	<form name="Calculator" ng-submit="ws.submit()">
+		<p>Base Meal Price:</p>
+		<input type="number" ng-model="ws.meal.basePrice" required> <br>
+		<p>Tax Rate: %</p>
+		<input type="number" ng-model="ws.meal.taxRate" required> <br>
+		<p>Tip Rate: %</p>
+		<input type="number" ng-model="ws.meal.tipRate" required> <br>
+		<button>Submit</button>
+	</form>
+	<button ng-click="ws.cancel()">Cancel</button>
+
+	<h2>Customer Charges</h2>
+
+		<p>Subtotal {{ws.meal.subtotal | currency}}</p>
+		<p>Tip {{ws.meal.tip | currency}}</p>
+		<p>Total {{ws.meal.total | currency}}</p>

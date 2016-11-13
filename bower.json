@@ -1,0 +1,15 @@
+{
+  "name": "WaitstaffCalculator",
+  "homepage": "https://github.com/maxbfrecka/WaitstaffCalculator",
+  "authors": [
+    "maxbfrecka <maxbfrecka@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "angular-messages": "^1.5.8"
+  }
+}
